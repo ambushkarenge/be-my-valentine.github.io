@@ -18,10 +18,10 @@ function moveButton(event) {
 
 // List your local filenames here
 const gifList = [
-    "meow1.gif",
-    "meow2.gif",
-    "meow3.gif",
-    "meow4.gif",
+    "meow1.GIF",
+    "meow2.GIF",
+    "meow3.GIF",
+    "meow4.GIF",
     "meow5.PNG"
 ];
 
