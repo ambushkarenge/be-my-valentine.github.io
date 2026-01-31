@@ -12,12 +12,26 @@ body {
 
 .container {
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Ensure the content stays in the top 60% of the screen */
+    height: 60vh; 
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px; /* Space between text and GIF */
+    font-size: 1.5rem;
+    padding: 0 10px;
 }
 
 img {
-    max-width: 300px;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    height: 250px; /* Slightly smaller to ensure fit on mobile */
+    /* width: 250px; */
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .buttons {
@@ -37,30 +51,28 @@ button {
     transition: transform 0.2s;
 }
 
-#yesBtn {
-    background-color: #4CAF50;
-    color: white;
+/* Update your button styles */
+#yesBtn, #noBtn {
     position: fixed;
-    top: 75%; /* Lowered slightly for better thumb reach on mobile */
-    left: 15%; /* Moves it to the left side of the screen */
-    width: 30%; /* Makes button size relative to screen width */
+    top: 80%; /* Increased from 70% to 80% to move them below the GIF */
+    width: 30%;
     max-width: 150px;
-    z-index: 10;
+    padding: 15px;
+    z-index: 100; /* Ensures buttons stay on top of everything else */
+}
+
+#yesBtn {
+    left: 15%;
 }
 
 #noBtn {
-    background-color: #f44336;
-    color: white;
-    position: fixed;
-    top: 75%;
-    right: 15%; /* Moves it to the right side */
-    width: 30%;
-    max-width: 150px;
-    z-index: 10;
-    /* Added for smooth movement on mobile */
-    transition: left 0.2s ease, top 0.2s ease; 
-    touch-action: none; /* Prevents the phone from trying to scroll when touching the button */
+    right: 15%;
+    touch-action: none;
+    transition: all 0.2s ease;
 }
+
+
+
 button:active {
     transform: scale(0.95);
 }
