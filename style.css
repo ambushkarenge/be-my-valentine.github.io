@@ -42,7 +42,7 @@ button {
     color: white;
     position: fixed;
     top: 75%; /* Lowered slightly for better thumb reach on mobile */
-    left: 35%; /* Moves it to the left side of the screen */
+    left: 15%; /* Moves it to the left side of the screen */
     width: 30%; /* Makes button size relative to screen width */
     max-width: 150px;
     z-index: 10;
@@ -53,7 +53,7 @@ button {
     color: white;
     position: fixed;
     top: 75%;
-    right: 35%; /* Moves it to the right side */
+    right: 15%; /* Moves it to the right side */
     width: 30%;
     max-width: 150px;
     z-index: 10;
