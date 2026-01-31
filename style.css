@@ -40,20 +40,26 @@ button {
 #yesBtn {
     background-color: #4CAF50;
     color: white;
-    position: fixed; /* Locked to the screen */
-    top: 70%;        /* Positioned below the GIF */
-    left: calc(50% - 110px); /* Shifted slightly left of center */
+    position: fixed;
+    top: 75%; /* Lowered slightly for better thumb reach on mobile */
+    left: 35%; /* Moves it to the left side of the screen */
+    width: 30%; /* Makes button size relative to screen width */
+    max-width: 150px;
     z-index: 10;
 }
 
 #noBtn {
     background-color: #f44336;
     color: white;
-    position: fixed; /* Locked to the screen */
-    top: 70%;        /* Same height as Yes button */
-    left: calc(50% + 10px);  /* Shifted slightly right of center */
+    position: fixed;
+    top: 75%;
+    right: 35%; /* Moves it to the right side */
+    width: 30%;
+    max-width: 150px;
     z-index: 10;
-    /* transition: 0.1s; Add this if you want it to "glide" instead of teleport */
+    /* Added for smooth movement on mobile */
+    transition: left 0.2s ease, top 0.2s ease; 
+    touch-action: none; /* Prevents the phone from trying to scroll when touching the button */
 }
 button:active {
     transform: scale(0.95);
