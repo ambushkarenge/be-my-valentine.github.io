@@ -32,6 +32,19 @@ const questionList = [
     "I'm not kitten around anymore...",
     "Peace was never an option!!!",
 ]
+
+// Preload function to store GIFs in browser memory
+const preloadGifs = (urls) => {
+    urls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+    });
+};
+
+// Call the function with your list
+preloadGifs(gifList);
+
+
 let currentGifIndex = 0;
 const gifElement = document.getElementById('MainGIF');
 const TextElement = document.getElementById('question');
