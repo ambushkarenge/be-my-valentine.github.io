@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe4e1; /* Soft pink background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevents scrollbars if the button moves near the edge */
+}
+
+.container {
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#yesBtn {
+    background-color: #4CAF50;
+    color: white;
+    position: fixed; /* Locked to the screen */
+    top: 70%;        /* Positioned below the GIF */
+    left: calc(50% - 110px); /* Shifted slightly left of center */
+    z-index: 10;
+}
+
+#noBtn {
+    background-color: #f44336;
+    color: white;
+    position: fixed; /* Locked to the screen */
+    top: 70%;        /* Same height as Yes button */
+    left: calc(50% + 10px);  /* Shifted slightly right of center */
+    z-index: 10;
+    /* transition: 0.1s; Add this if you want it to "glide" instead of teleport */
+}
+button:active {
+    transform: scale(0.95);
+}
