@@ -67,6 +67,8 @@ function changeGif() {
 }
 
 function celebrate() {
-    alert("Yay! I knew you'd say yes! ❤️");
-    // You can redirect to another page or play a sound here
+    TextElement.innerText = "Purr-fect! ❤️ See you soon!";
+    noBtn.style.opacity = '0'; // Fades out the No button
+    noBtn.style.pointerEvents = 'none'; // Disables it
+    gifElement.style.transform = "scale(1.1)";
 }

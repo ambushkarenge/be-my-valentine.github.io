@@ -1,30 +1,48 @@
+:root {
+    --primary: #ff4d6d;
+    --secondary: #4ade80;
+    --bg: #fff5f6;
+    --text: #2d3436;
+}
+
 body {
     margin: 0;
     padding: 0;
+    background-color: #ffe4e1; /* Soft pink background */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at center, #ffe4e4 75%, #f56565 100%);
+    color: var(--text);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffe4e1; /* Soft pink background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* Prevents scrollbars if the button moves near the edge */
 }
 
-.container {
+.main-card {
     text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Ensure the content stays in the top 60% of the screen */
-    height: 60vh; 
-    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px); /* Modern frosted glass effect */
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 h1 {
-    margin-bottom: 20px; /* Space between text and GIF */
-    font-size: 1.5rem;
-    padding: 0 10px;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    min-height: 4rem; /* Keeps layout stable when text changes */
+}
+.gif-container {
+    /* width: 260px;
+    height: 260px; */
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+    /* border: 6px solid white; */
 }
 
 img {
@@ -49,6 +67,8 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s;
+
+    
 }
 
 /* Update your button styles */
@@ -62,15 +82,25 @@ button {
 }
 
 #yesBtn {
-    left: 15%;
+    background-color: var(--secondary);
+    color: white;
+    left: calc(50% - 135px);
+    animation: pulse 1s infinite; /* Makes the "Yes" button breathe */
 }
 
 #noBtn {
-    right: 15%;
-    touch-action: none;
-    transition: all 0.2s ease;
+    background-color: white;
+    color: var(--primary);
+    right: calc(50% - 135px);
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+    100% { transform: scale(1); }
+}
 
 
 button:active {
